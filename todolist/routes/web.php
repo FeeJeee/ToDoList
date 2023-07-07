@@ -23,9 +23,6 @@ Route::get('/', function () {
 
 Route::view('/', 'welcome')->name('welcome');
 
-
-//Route::get('/', 'welcome')->name('welcome');
-//
 Route::get('/tasks', [TaskController::class, 'index'])->middleware('auth')->name('tasks');
 
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest')->name('register');
